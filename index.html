@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Night Trip</title>
+  <link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+
+  <!-- popup -->
+  <section id="popupMain" class="popups">
+
+    <div id="popupMenu" class="popupMenu">
+      <ul class="popupMenu__list">
+        <li class="popupMenu__item">
+          <a onclick="scrollMain()" class="popupMenu__link" href="#">
+            Main
+          </a>
+        </li>
+
+        <li class="popupMenu__item">
+          <a onclick="scrollTrip()" class="popupMenu__link" href="#">
+            Pick your trip
+          </a>
+        </li>
+
+        <li class="popupMenu__item">
+          <a onclick="scrollAboutUs()" class="popupMenu__link" href="#">
+            About Us
+          </a>
+        </li>
+
+        <li class="popupMenu__item">
+          <a onclick="scrollPeople()" class="popupMenu__link" href="#">
+            People's thoughts
+          </a>
+        </li>
+
+        <li class="popupMenu__item">
+          <a onclick="scrollFooter()" class="popupMenu__link" href="#">
+            Contacts
+          </a>
+        </li>
+      </ul>
+      <button onclick="menu()" class="popupMenu__close">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </div>
+
+  </section>
+  
+
+  <!-- header -->
+  <header id="header" class="header">
+    <div class="header__container">
+
+      <a href="#" class="header__logo" data-rellax="true" data-rellax-speed="7">
+        NT
+        <span>.</span>
+      </a>
+
+      <div class="header__searchBox" data-rellax="true" data-rellax-speed="7">
+        <input id="inputSearch" class="header__input" type="text" placeholder="Type to search">
+        <a href="#" class="header__search">
+          <ion-icon name="search-outline"></ion-icon>
+        </a>
+      </div>
+
+      <button onclick="menu()" id="callMenu" class="header__btn btn" data-rellax="true" data-rellax-speed="7">
+        menu
+      </button>
+
+    </div>
+  </header>
+
+  <!-- hero -->
+  <section id="hero" class="hero">
+    <div class="hero__container">
+
+      <svg class="hero__heading" data-rellax="true" data-rellax-speed="8">
+        <use xlink:href="img/sprite.svg#hero--heading"></use>
+      </svg>
+
+      <p class="hero__desc" data-rellax="true" data-rellax-speed="8">
+        WE GOT TRIPS FOR THE TRIPPSTER IN YOU
+      </p>
+
+      <p class="hero__low-desc" data-rellax="true" data-rellax-speed="10">
+        Neque, eros commodo, nascetur ullamcorper vitae. Tincidunt ut venenatis, volutpat lorem faucibus mauris, quisque. Integer gravida sed quis congue. Vel risus, arcu a viverra leo id pulvinar ultricies. Enim in in in pulvinar nulla sollicitudin. Ullamcorper.
+      </p>
+
+      <div class="hero__moreBox" data-rellax="true" data-rellax-speed="20">
+
+        <span class="hero__moreBox__scroll">
+          SCROLL
+        </span>
+
+        <ul class="hero__moreBox__socList">
+          <li class="hero__moreBox__socItem">
+            <a href="#">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li class="hero__moreBox__socItem">
+            <a href="#">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li class="hero__moreBox__socItem">
+            <a href="#">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- main -->
+  <main>
+
+    <!-- trip -->
+    <section id="trip" class="trip">
+      <div class="trip__container">
+
+        <div class="trip__titleBox">
+          <h2 class="trip__heading heading">
+            Pick your trip
+          </h2>
+  
+          <p class="trip__desc">
+            Our team put together some trips to you to discover, <br> feel free to discover each of them.
+          </p>
+        </div>
+
+
+        <div class="trip__tabsList">
+          <button class="trip__tabsBtn is_active" data-path="one">
+            Chill Adventure
+          </button>
+           
+          <button class="trip__tabsBtn" data-path="two">
+            Spooky Times
+          </button>
+          
+          <button class="trip__tabsBtn" data-path="three">
+            Desert Madness
+          </button>
+          
+          <button class="trip__tabsBtn" data-path="four">
+            Out in the wild
+          </button>
+        </div>
+
+        <ul class="trip__contentList">
+
+          <li class="trip__contentItem is_active" data-target="one">
+            <div class="trip__contentImgBox">
+              <img src="img/trip/bg.png" class="trip__contentImg">
+
+              <div class="trip__contentArrowBox">
+                <button id="arrowPrev" class="trip__contentArrow">
+                  <ion-icon name="arrow-forward-outline"></ion-icon>
+                </button>
+                
+                <button id="arrowNext" class="trip__contentArrow">
+                  <ion-icon name="arrow-forward-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+
+            <div class="trip__contentTitle">
+              <h3 class="trip__contentHeading heading">
+                Chill Adventure
+              </h3>
+
+              <p class="trip__contentDesc">
+                Ornare vivamus molestie pellentesque nunc. Sed sapien erat ultrices curabitur. Erat id fringilla arcu condimentum fames.
+              </p>
+
+              <p class="trip__contentLowDesc">
+                Aliquet dictum aliquet faucibus cursus turpis. Suspendisse cum rutrum sit ut sociis. Pellentesque neque orci adipiscing pharetra lacus, dignissim pharetra ipsum blandit. Feugiat quis quam consectetur lectus id quis tortor vel, mattis.
+              </p>
+
+              <button class="trip__contentBtn btn">
+                SEE OUR LATEST OFFER
+              </button>
+            </div>
+
+            <div class="trip__contentNumber">
+              <span>
+                01.
+              </span>
+
+              <span>
+                GRAND DUNES <br> LANDSCAPE
+              </span>
+            </div>
+
+            <svg class="trip__contentDots">
+              <use xlink:href="img/sprite.svg#trip--Dots"></use>
+            </svg>
+          </li>
+
+          <li class="trip__contentItem" data-target="two">
+            <div class="trip__contentImgBox">
+              <img src="img/trip/bg.png" class="trip__contentImg">
+            </div>
+
+            <div class="trip__contentTitle">
+              <h3 class="trip__contentHeading heading">
+                Spooky Times
+              </h3>
+
+              <p class="trip__contentDesc">
+                Ornare vivamus molestie pellentesque nunc. Sed sapien erat ultrices curabitur. Erat id fringilla arcu condimentum fames.
+              </p>
+
+              <p class="trip__contentLowDesc">
+                Aliquet dictum aliquet faucibus cursus turpis. Suspendisse cum rutrum sit ut sociis. Pellentesque neque orci adipiscing pharetra lacus, dignissim pharetra ipsum blandit. Feugiat quis quam consectetur lectus id quis tortor vel, mattis.
+              </p>
+            </div>
+
+            <div class="trip__contentNumber">
+              <span>
+                02.
+              </span>
+
+              <span>
+                GRAND DUNES <br> LANDSCAPE
+              </span>
+            </div>
+
+            <svg class="trip__contentDots">
+              <use xlink:href="img/sprite.svg#trip--Dots"></use>
+            </svg>
+          </li>
+
+          <li class="trip__contentItem" data-target="three">
+            <div class="trip__contentImgBox">
+              <img src="img/trip/bg.png" class="trip__contentImg">
+            </div>
+
+            <div class="trip__contentTitle">
+              <h3 class="trip__contentHeading heading">
+                Desert Madness
+              </h3>
+
+              <p class="trip__contentDesc">
+                Ornare vivamus molestie pellentesque nunc. Sed sapien erat ultrices curabitur. Erat id fringilla arcu condimentum fames.
+              </p>
+
+              <p class="trip__contentLowDesc">
+                Aliquet dictum aliquet faucibus cursus turpis. Suspendisse cum rutrum sit ut sociis. Pellentesque neque orci adipiscing pharetra lacus, dignissim pharetra ipsum blandit. Feugiat quis quam consectetur lectus id quis tortor vel, mattis.
+              </p>
+            </div>
+
+            <div class="trip__contentNumber">
+              <span>
+                03.
+              </span>
+
+              <span>
+                GRAND DUNES <br> LANDSCAPE
+              </span>
+            </div>
+
+            <svg class="trip__contentDots">
+              <use xlink:href="img/sprite.svg#trip--Dots"></use>
+            </svg>
+          </li>
+
+          <li class="trip__contentItem" data-target="four">
+            <div class="trip__contentImgBox">
+              <img src="img/trip/bg.png" class="trip__contentImg">
+            </div>
+
+            <div class="trip__contentTitle">
+              <h3 class="trip__contentHeading heading">
+                Out in the wild
+              </h3>
+
+              <p class="trip__contentDesc">
+                Ornare vivamus molestie pellentesque nunc. Sed sapien erat ultrices curabitur. Erat id fringilla arcu condimentum fames.
+              </p>
+
+              <p class="trip__contentLowDesc">
+                Aliquet dictum aliquet faucibus cursus turpis. Suspendisse cum rutrum sit ut sociis. Pellentesque neque orci adipiscing pharetra lacus, dignissim pharetra ipsum blandit. Feugiat quis quam consectetur lectus id quis tortor vel, mattis.
+              </p>
+            </div>
+
+            <div class="trip__contentNumber">
+              <span>
+                04.
+              </span>
+
+              <span>
+                GRAND DUNES <br> LANDSCAPE
+              </span>
+            </div>
+
+            <svg class="trip__contentDots">
+              <use xlink:href="img/sprite.svg#trip--Dots"></use>
+            </svg>
+          </li>
+
+        </ul>
+
+        <div class="trip__soc">
+          <h3 class="trip__socHeading">
+            share it:
+          </h3>
+
+          <ul class="trip__socList">
+            <li class="trip__socItem">
+              <a href="#">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+             
+            <li class="trip__socItem">
+              <a href="#">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+             
+            <li class="trip__socItem">
+              <a href="#">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+      
+      </div>
+    </section>
+
+    <!-- about-us -->
+    <section id="aboutUs" class="about-us">
+      <div class="about-us__container">
+
+        <div class="about-us__title">
+
+          <h2 class="about-us__heading heading">
+            About Us
+          </h2>
+
+          <p class="about-us__desc">
+            We’re a team of four passioned people.
+          </p>
+
+          <p class="about-us__lowDesc">
+            We’re ready to take the world by storm and let you find new travel opportunities.
+          </p>
+
+          <p class="about-us__lowDesc">
+            Our everyday task is to make sure that you satisfied with the services and products that we provide.
+          </p>
+
+          <p class="about-us__desc">
+            With <span>&#128150;</span> from Amsterdam, Netherlands.
+          </p>
+
+          <button class="about-us__btn btn">
+            READ MORE ABOUT US
+          </button>
+
+        </div>
+
+
+        <ul class="about-us__imgList">
+          <li class="about-us__imgItem">
+            <img src="img/about-us/1.png">
+          </li>
+
+          <li class="about-us__imgItem">
+            <img src="img/about-us/2.png">
+          </li>
+
+          <li class="about-us__imgItem">
+            <img src="img/about-us/3.png">
+          </li>
+
+          <li class="about-us__imgItem">
+            <img src="img/about-us/4.png">
+          </li>
+        </ul>
+
+        <svg class="about-us__dots">
+          <use xlink:href="img/sprite.svg#about-us--Dots"></use>
+        </svg>
+
+      </div>
+    </section>
+
+    <!-- people -->
+    <section id="people" class="people">
+      <div class="people__container">
+
+        <h2 class="people__heading heading">
+          People’s thoughts
+        </h2>
+
+        <p class="people__desc">
+          SEE WHAT ARE OTHERS SAYING
+        </p>
+
+
+        <ul class="people__list">
+          <li class="people__item">
+            <h3 class="people__itemHeading">
+              Elementum mi felis, sit velit lobortis ultricies non. Mattis enim, nisl
+            </h3>
+
+            <p class="people__itemDesc">
+              adipiscing natoque diam et. Cum posuere in velit massa sagittis augue egestas. Eu sollicitudin et quam eu. Nunc, sed imperdiet blandit morbi. Maecenas lobortis tristique rutrum.
+            </p>
+
+            <div class="people__itemUser">
+              <img class="people__itemUser__img" src="img/people/user.png">
+
+              <h4 class="people__itemUser__name">
+                Judy ROSELESS <br> MARKETING HEAD at ROM.
+              </h4>
+            </div>
+          </li>
+           
+          <li class="people__item">
+            <h3 class="people__itemHeading">
+              Elementum mi felis, sit velit lobortis ultricies non. Mattis enim, nisl
+            </h3>
+
+            <p class="people__itemDesc">
+              adipiscing natoque diam et. Cum posuere in velit massa sagittis augue egestas. Eu sollicitudin et quam eu. Nunc, sed imperdiet blandit morbi. Maecenas lobortis tristique rutrum.
+            </p>
+
+            <div class="people__itemUser">
+              <img class="people__itemUser__img" src="img/people/user.png">
+
+              <h4 class="people__itemUser__name">
+                Judy ROSELESS <br> MARKETING HEAD at ROM.
+              </h4>
+            </div>
+          </li>
+           
+          <li class="people__item">
+            <h3 class="people__itemHeading">
+              Elementum mi felis, sit velit lobortis ultricies non. Mattis enim, nisl
+            </h3>
+
+            <p class="people__itemDesc">
+              adipiscing natoque diam et. Cum posuere in velit massa sagittis augue egestas. Eu sollicitudin et quam eu. Nunc, sed imperdiet blandit morbi. Maecenas lobortis tristique rutrum.
+            </p>
+
+            <div class="people__itemUser">
+              <img class="people__itemUser__img" src="img/people/user.png">
+
+              <h4 class="people__itemUser__name">
+                Judy ROSELESS <br> MARKETING HEAD at ROM.
+              </h4>
+            </div>
+          </li>
+           
+          <li class="people__item">
+            <h3 class="people__itemHeading">
+              Elementum mi felis, sit velit lobortis ultricies non. Mattis enim, nisl
+            </h3>
+
+            <p class="people__itemDesc">
+              adipiscing natoque diam et. Cum posuere in velit massa sagittis augue egestas. Eu sollicitudin et quam eu. Nunc, sed imperdiet blandit morbi. Maecenas lobortis tristique rutrum.
+            </p>
+
+            <div class="people__itemUser">
+              <img class="people__itemUser__img" src="img/people/user.png">
+
+              <h4 class="people__itemUser__name">
+                Judy ROSELESS <br> MARKETING HEAD at ROM.
+              </h4>
+            </div>
+          </li>
+        </ul>
+
+        <h2 class="people__downHeading heading">
+          See you soon!
+        </h2>
+
+        <p class="people__downDesc">
+          We hope to meet each other very soon.
+        </p>
+      
+      </div>
+    </section>
+
+  </main>
+
+  <!-- footer -->
+  <footer id="footer" class="footer">
+    <div class="footer__container">
+
+      <div class="footer__group">
+        <div class="footer__link">
+          <h3 class="footer__linkHeading">
+            ABOUT
+          </h3>
+  
+          <ul class="footer__linkList">
+            <li class="footer__linkItem">
+              <a href="#">
+                Our Mission
+              </a>
+            </li>
+             
+            <li class="footer__linkItem">
+              <a href="#">
+                Terms
+              </a>
+            </li>
+             
+            <li class="footer__linkItem">
+              <a href="#">
+                Copyrights
+              </a>
+            </li>
+          </ul>
+        </div>
+         
+        <div class="footer__link">
+          <h3 class="footer__linkHeading">
+            FAQ
+          </h3>
+  
+          <ul class="footer__linkList">
+            <li class="footer__linkItem">
+              <a href="#">
+                Rules
+              </a>
+            </li>
+             
+            <li class="footer__linkItem">
+              <a href="#">
+                Tickets
+              </a>
+            </li>
+             
+            <li class="footer__linkItem">
+              <a href="#">
+                Editions
+              </a>
+            </li>
+  
+            <li class="footer__linkItem">
+              <a href="#">
+                Contribute
+              </a>
+            </li>
+          </ul>
+        </div>
+         
+        <div class="footer__link">
+          <h3 class="footer__linkHeading">
+            EVENTS
+          </h3>
+  
+          <ul class="footer__linkList">
+            <li class="footer__linkItem">
+              <a href="#">
+                Star Gazing
+              </a>
+            </li>
+             
+            <li class="footer__linkItem">
+              <a href="#">
+                Desert Mania
+              </a>
+            </li>
+             
+            <li class="footer__linkItem">
+              <a href="#">
+                Dunes Madness
+              </a>
+            </li>
+  
+            <li class="footer__linkItem">
+              <a href="#">
+                Spooky Land
+              </a>
+            </li>
+          </ul>
+        </div>
+  
+        <div class="footer__link">
+          <h3 class="footer__linkHeading">
+            CONTACT US
+          </h3>
+  
+          <ul class="footer__linkList">  
+            <li class="footer__linkItem">
+              <a href="mailto:hello@example.com">
+                hello@example.com
+              </a>
+            </li>
+             
+            <li class="footer__linkItem">
+              <a href="tel:4055550128">
+                (405) 555-0128
+              </a>
+            </li>
+  
+            <li class="footer__linkItem">
+              <a href="tel:2525550126">
+                (252) 555-0126
+              </a>
+            </li>
+          </ul>
+        </div>
+         
+        <div class="footer__link">
+          <h3 class="footer__linkHeading">
+            FOLLOW US
+          </h3>
+  
+          <ul class="footer__linkList">
+            <li class="footer__linkItem">
+              <a href="#">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+             
+            <li class="footer__linkItem">
+              <a href="#">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+             
+            <li class="footer__linkItem">
+              <a href="#">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <span class="footer__copyright">
+        Copyright © Night Trips 2019. All rights reserved.
+      </span>
+
+      <a href="#" class="footer__logo">
+        NT
+        <span>.</span>
+      </a>
+
+    </div>
+  </footer>
+
+  
+  <!-- ion icons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- rellax -->
+  <script src="js/rellax.min.js"></script>
+
+  <!-- main -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
