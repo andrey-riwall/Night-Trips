@@ -1,0 +1,19 @@
+// INPORT SETT
+@import 'fonts';
+@import 'vars';
+@import 'mixins';
+@import 'vendor';
+@import 'settings';
+
+// IMPORT COMPONENTS
+@import './components/container';
+@import './components/styles';
+@import './components/header';
+@import './components/hero';
+@import './components/main';
+@import './components/trip';
+@import './components/about-us';
+@import './components/people';
+@import './components/footer';
+@import './components/popups';
+@import './components/uikit';

@@ -1,0 +1,138 @@
+.footer {
+  padding-top: vw(133);
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__group {
+  display: flex;
+  align-items: flex-start;
+
+  width: 100%;
+}
+
+.footer__link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  margin-bottom: vw(69);
+
+  &:not(:last-child) {
+    margin-right: vw(125);
+  }
+}
+
+.footer__linkHeading {
+  position: relative;
+
+  font-weight: 700;
+  font-size: vw(18);
+  line-height: 100%;
+  color: var(--color-white);
+  text-transform: uppercase;
+
+  margin-bottom: vw(46);
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: vw(-19);
+
+    width: vw(50);
+    height: vw(1);
+    background: var(--color-main);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: vw(50);
+    bottom: vw(-21);
+
+    width: vw(5);
+    height: vw(5);
+    border: vw(1) solid var(--color-main);
+    transform: rotate(45deg);
+  }
+}
+
+.footer__linkList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer__linkItem {
+  a {
+    font-weight: 400;
+    font-size: vw(15);
+    line-height: vw(19);
+    color: #FFFFFF;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: vw(20);
+  }
+}
+
+.footer__link:last-child {
+  margin-left: vw(47);
+
+  .footer__linkList {
+    flex-direction: row;
+
+    .footer__linkItem:not(:last-child) {
+      margin: 0;
+      margin-right: vw(18);
+    }
+
+    .footer__linkItem {
+      a {
+        color: var(--color-main);
+
+        ion-icon {
+          font-size: vw(20);
+        }
+      }
+    }
+  }
+}
+
+.footer__copyright {
+  font-weight: 400;
+  font-size: vw(15);
+  line-height: vw(25);
+  color: var(--color-white);
+
+  margin-bottom: vw(26);
+}
+
+.footer__logo {
+  display: inline-block;
+
+  font-family: 'Playfair Display', sans-serif;
+  font-weight: 700;
+  font-size: vw(36);
+  line-height: 190%;
+  color: var(--color-white);
+
+  margin-bottom: vw(150);
+
+  span {
+    display: inline-block;
+
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 700;
+    font-size: vw(36);
+    line-height: 190%;
+    color: var(--color-main);
+
+    margin-left: vw(-7.35);
+  }
+}

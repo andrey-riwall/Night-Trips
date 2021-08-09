@@ -1,0 +1,67 @@
+// Playfair Display
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+
+// Noe Display
+@font-face {
+  font-family: 'Noe Display';
+  src: url('../fonts/NoeDisplay.woff2'), format('woff2'),
+       url('../fonts/NoeDisplay.woff'), format('woff');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+// Larsseit
+@font-face {
+  font-family: 'Larsseit';
+  src: url('../fonts/Lasrsseit-Thin.woff2'), format('woff2'),
+       url('../fonts/Lasrsseit-Thin.woff'), format('woff');
+  font-weight: 100;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Larsseit';
+  src: url('../fonts/Lasrsseit-Light.woff2'), format('woff2'),
+       url('../fonts/Lasrsseit-Light.woff'), format('woff');
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Larsseit';
+  src: url('../fonts/Lasrsseit-Regular.woff2'), format('woff2'),
+       url('../fonts/Lasrsseit-Regular.woff'), format('woff');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Larsseit';
+  src: url('../fonts/Lasrsseit-Medium.woff2'), format('woff2'),
+       url('../fonts/Lasrsseit-Medium.woff'), format('woff');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Larsseit';
+  src: url('../fonts/Lasrsseit-Bold.woff2'), format('woff2'),
+       url('../fonts/Lasrsseit-Bold.woff'), format('woff');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Larsseit';
+  src: url('../fonts/Lasrsseit-ExtraBold.woff2'), format('woff2'),
+       url('../fonts/Lasrsseit-ExtraBold.woff'), format('woff');
+  font-weight: 800;
+  font-display: swap;
+  font-style: normal;
+}

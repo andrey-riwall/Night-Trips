@@ -1,0 +1,62 @@
+.popups {
+  position: relative;
+}
+
+.popupMenu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  background: var(--color-btn);
+
+  z-index: 1000;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: .5s;
+
+  &.is_active {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  &__item {
+    a {
+      font-weight: 500;
+      font-size: vw(50);
+      line-height: 150%;
+      color: var(--color-white);
+  
+      text-transform: uppercase;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: vw(20);
+    right: vw(20);
+
+    ion-icon {
+      font-size: vw(50);
+      color: var(--color-white);
+    }
+  }
+}

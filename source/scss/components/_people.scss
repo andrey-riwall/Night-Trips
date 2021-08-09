@@ -1,0 +1,137 @@
+.people {
+  position: relative;
+
+  width: vw(1680);
+  min-height: vw(1448);
+  margin: 0 auto;
+
+  background: var(--color-bg);
+  border-radius: vw(8);
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translate(50%, -50%);
+
+    width: vw(2);
+    height: vw(80);
+
+    background: linear-gradient(180deg, #09F4F4 0%, #00C9E0 100%);
+    border-radius: vw(13);
+
+    z-index: 100;
+  }
+
+  &::after {
+    bottom: 0;
+    transform: translate(-50%, 50%);
+  }
+}
+
+.people__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.people__heading {
+  margin-top: vw(100);
+  margin-bottom: vw(31);
+}
+
+.people__desc {
+  font-weight: 700;
+  font-size: vw(24);
+  line-height: 150%;
+  letter-spacing: 0.15em;
+  color: var(--color-white);
+
+  margin-bottom: vw(73);
+}
+
+.people__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  width: 100%;
+
+  margin-bottom: vw(150);
+}
+
+.people__item {
+  width: vw(510);
+  height: vw(504);
+
+  padding: vw(75) vw(74) vw(75) vw(102);
+
+  background: var(--color-cards);
+  box-shadow: 0px 20px 30px rgba(0, 201, 224, 0.03);
+  border-radius: vw(5);
+}
+
+.people__item:not(:nth-child(even)) {
+  margin-right: vw(24);
+}
+
+.people__item:nth-child(-n+2) {
+  margin-bottom: vw(24);
+}
+
+.people__itemHeading {
+  font-weight: 700;
+  font-size: vw(18);
+  line-height: 190%;
+  color: var(--color-white);
+
+  margin-bottom: vw(15);
+}
+
+.people__itemDesc {
+  font-weight: 300;
+  font-size: vw(18);
+  line-height: 190%;
+  color: var(--color-white);
+
+  margin-bottom: vw(27);
+}
+
+.people__itemUser {
+  display: flex;
+  align-items: center;
+}
+
+.people__itemUser__img {
+  width: vw(80);
+  height: vw(80);
+  border-radius: vw(8);
+
+  margin-right: vw(15);
+}
+
+.people__itemUser__name {
+  font-weight: 700;
+  font-size: vw(12);
+  line-height: 170%;
+  letter-spacing: 0.15em;
+  color: var(--color-white);
+  text-transform: uppercase;
+}
+
+.people__downHeading {
+  margin-bottom: vw(31);
+}
+
+.people__downDesc {
+  max-width: vw(388);
+  padding-bottom: vw(145);
+
+  font-weight: 700;
+  font-size: vw(24);
+  line-height: 150%;
+  letter-spacing: 0.07em;
+  color: var(--color-white);
+  text-align: center;
+}

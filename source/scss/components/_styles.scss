@@ -1,0 +1,48 @@
+// btn
+.btn {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: vw(62);
+
+  font-weight: 700;
+  font-size: vw(16);
+  line-height: vw(21);
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+
+  text-transform: uppercase;
+  background: #00C9E0;
+  border-radius: vw(48);
+  box-shadow: 5px 15px 40px var(--color-box-shadow);
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: vw(-15);
+    transform: translateY(-50%);
+
+    width: vw(30);
+    height: vw(2);
+
+    background: var(--color-white);
+    border-radius: vw(16);
+
+    z-index: 1000;
+  }
+}
+
+
+// heading
+.heading {
+  font-family: 'Noe Display';
+  font-weight: 700;
+  font-size: vw(72);
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  color: var(--color-white);
+}

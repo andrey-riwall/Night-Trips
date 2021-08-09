@@ -1,0 +1,57 @@
+// ALL
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  -webkit-tap-highlight-color: transparent;
+
+  font-family: 'Larsseit', sans-serif;
+  font-weight: 400;
+}
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+
+.is_outer {
+  position: relative !important;
+  left: -9999px !important;
+}
+
+.is_hidden {
+  display: none !important;
+}
+
+.for_mobile {
+  display: none;
+
+  @include mobile {
+    display: block;
+  }
+}
+
+.error_ {
+  border: 2px solid #ff4019 !important;
+}
+
+.visualy_hidden {
+  @include visualy-hidden;
+}

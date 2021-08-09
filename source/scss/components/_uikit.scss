@@ -1,0 +1,229 @@
+// search
+.header__searchBox {
+  transition: width .5s ease, background .5s ease;
+}
+
+.header__input {
+  transition: width .5s ease, color .5s ease;
+
+  &::placeholder {
+    transition: color .3s;
+  }
+}
+
+.header__search ion-icon {
+  transition: color .5s ease;
+}
+
+
+.header__searchBox:hover {
+  width: vw(258);
+  background: var(--color-white);
+}
+
+.header__searchBox:hover .header__input {
+  width: vw(197);
+  color: var(--color-black);
+
+  &::placeholder {
+    color: var(--color-alpha-white);
+  }
+}
+
+.header__searchBox:hover .header__search ion-icon {
+  color: var(--color-black);
+}
+
+
+
+// btn
+.btn {
+  transition: box-shadow .3s;
+}
+
+.btn:hover {
+  box-shadow: none;
+}
+
+.btn::after {
+  transition: transform .4s;
+}
+
+.btn:hover::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+
+
+// logo 
+.header__logo span {
+  transition: transform .35s ease-in-out;
+}
+
+.header__logo:hover span {
+  transform: translateY(-30%);
+}
+
+
+.footer__logo span {
+  transition: transform .35s ease-in-out;
+}
+
+.footer__logo:hover span {
+  transform: translateY(-30%);
+}
+
+
+
+// trip arrow
+.trip__contentArrow {
+  transition: background .3s;
+}
+
+.trip__contentArrow:hover {
+  background: var(--color-cards);
+}
+
+
+
+// img
+.about-us__imgItem {
+  position: relative;
+
+  &::after {
+    content: 'MARTIN JACK,';
+    position: absolute;
+    bottom: vw(50);
+    left: vw(-50);
+
+    display: flex;
+    align-items: center;
+
+    width: vw(186);
+    height: vw(75);
+    padding-left: vw(19);
+
+    background: var(--color-white);
+    box-shadow: 5px 15px 40px rgba(0, 201, 224, 0.2);
+    border-radius: vw(8);
+
+    font-weight: 700;
+    font-size: vw(15);
+    line-height: 150%;
+    letter-spacing: 0.05em;
+    color: var(--color-black);
+
+    opacity: 0;
+    transform: translateY(-20%);
+
+    transition: opacity .5s, transform .5s;
+  }
+
+  &::before {
+    content: 'CEO';
+    position: absolute;
+    bottom: vw(76);
+    left: vw(85);
+    z-index: 100;
+
+    font-weight: 700;
+    font-size: vw(15);
+    line-height: 150%;
+    letter-spacing: 0.05em;
+    color: var(--color-btn);
+
+    opacity: 0;
+    transform: translateY(-70%);
+
+    transition: opacity .5s, transform .5s;
+  }
+}
+
+.about-us__imgItem:hover::after,
+.about-us__imgItem:hover::before {
+  opacity: 1;
+  transform: none;
+}
+
+.about-us__imgItem img {
+  transition-property: opacity, filter;
+  transition-duration: .5s;
+}
+
+.about-us__imgItem:hover img {
+  opacity: 1;
+  filter: none;
+}
+
+
+
+// cards
+.people__item {
+  transition: .4s;
+}
+
+.people__item:hover {
+  background: var(--color-bg);
+  box-shadow: none;
+}
+
+
+
+// menu
+.popupMenu__item {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  z-index: 10000;
+}
+
+.popupMenu__item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: var(--color-cards);
+  transform: translateX(-101%);
+  z-index: -1;
+
+  transition: transform .7s;
+}
+
+.popupMenu__item:hover::before {
+  transform: none;
+}
+
+
+
+// select
+.hero *::selection,
+.header *::selection {
+  background: var(--color-btn);
+}
+
+main *::selection {
+  background: var(--color-main);
+}
+
+.trip__contentTitle *::selection {
+  background: var(--color-btn);
+}
+
+.about-us *::selection {
+  background: var(--color-btn);
+}
+
+.people *::selection {
+  background: var(--color-btn);
+}
+
+.footer *::selection {
+  background: var(--color-main);
+}
+
+.trip__contentNumber span:nth-child(1)::selection {
+  background: var(--color-main);
+}
